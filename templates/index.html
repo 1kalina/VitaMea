@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vita Mea</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #f4f4f4;
+            padding: 10px;
+        }
+
+        .main {
+            flex: 1;
+            /*background: #ddd;*/
+            padding: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        #container {
+            position: relative;
+            /*border: 1px solid #ccc;*/
+            min-height: 200px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #toggle-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            /*background: #f0f0f0;*/
+            /*border: 1px solid #ccc;*/
+            border-radius: 3px;
+            padding: 2px 8px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        #editor {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            display: none;
+            border: none;
+            outline: none;
+            resize: vertical;
+            font-family: monospace;
+            background-color: transparent;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script>
+</head>
+
+<body>
+    <div class="navbar">Vita Mea</div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>Your pages: </li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main" id="container"> <button id="toggle-btn">Edit</button>
+            <textarea id="editor"></textarea>
+        </div>
+    </div>
+</body>
+<script src="/static/script.js"></script>
+
+</html>
